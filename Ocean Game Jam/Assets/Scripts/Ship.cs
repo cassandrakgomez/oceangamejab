@@ -17,12 +17,35 @@ public class Ship : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    //// Update is called once per frame
-   // public void Move(Vector3 movement)
-    //{
-   //     transform.localPosition += movement * 12 * Time.deltaTime;
-//
-   // }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Rock"))
+        {
+            HandleCollisionWithRock(collision);
+        }
+    }
+
+
+    void HandleCollisionWithRock(Collision2D collision)
+    {
+        if (isDead) return;
+
+        Debug.Log("Ship collided with rock!");
+
+        Die();
+
+        // Destroy the rock
+        Destroy(collision.gameObject);
+    }
+
+    void Die()
+    {
+        isDead = true;
+        Debug.Log("Ship is dead!");
+        Destroy(gameObject);
+    }
+
 
    public void Move(Vector3 movement)
     {
