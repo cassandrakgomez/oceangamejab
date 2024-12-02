@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Rock : MonoBehaviour
 {
     Rigidbody2D rb; 
-    [SerializeField] float speed = 5f; // Rock speed    
+    [SerializeField] float speed = 10f;     
 
     public Stopwatch stopwatch;
 
