@@ -20,4 +20,10 @@ public class MainMenuManager : MonoBehaviour
             Debug.Log("Settings Button Working!");
             SceneManager.LoadScene("Settings");
         }
+
+        public void MainMenu()
+        {
+            Debug.Log("Main Menu Button Working!");
+            SceneManager.LoadScene("MainMenu");
+        }
     }

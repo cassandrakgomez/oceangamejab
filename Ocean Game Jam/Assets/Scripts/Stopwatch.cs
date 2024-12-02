@@ -31,6 +31,8 @@ public class Stopwatch : MonoBehaviour
 
     public void StopStopwatch(){
         stopwatchActive = false;
+
+        PlayerPrefs.SetFloat("ElaspedTime", currentTime);
     }
 
     public float GetElapsedTime(){

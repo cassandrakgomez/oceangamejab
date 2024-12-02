@@ -8,6 +8,8 @@ public class Rock : MonoBehaviour
     Rigidbody2D rb; 
     [SerializeField] float speed = 5f; // Rock speed    
 
+    public Stopwatch stopwatch;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,7 +27,7 @@ public class Rock : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Game Over");
         }
     }
 

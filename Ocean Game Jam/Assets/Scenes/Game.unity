@@ -2832,9 +2832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1b0b8d7d9c7654891c8603a05ce604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 433441463}
-  currentTimeText: {fileID: 1271684453}
-  bestTimeText: {fileID: 645395453}
+  timeText: {fileID: 0}
 --- !u!1 &645395451
 GameObject:
   m_ObjectHideFlags: 0
@@ -3892,7 +3890,6 @@ GameObject:
   - component: {fileID: 1250473893}
   - component: {fileID: 1250473892}
   - component: {fileID: 1250473895}
-  - component: {fileID: 1250473896}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3999,21 +3996,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 375566621}
---- !u!114 &1250473896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1250473890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d1b0b8d7d9c7654891c8603a05ce604, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 0}
-  currentTimeText: {fileID: 0}
-  bestTimeText: {fileID: 0}
 --- !u!1 &1260124912
 GameObject:
   m_ObjectHideFlags: 0
@@ -4276,7 +4258,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1331757177}
   - component: {fileID: 1331757179}
-  - component: {fileID: 1331757180}
   - component: {fileID: 1331757178}
   m_Layer: 5
   m_Name: TimerText
@@ -4401,20 +4382,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331757176}
   m_CullTransparentMesh: 1
---- !u!114 &1331757180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331757176}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc087434235257949b2efa21a129fe8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 1331757178}
-  bestTimeText: {fileID: 0}
 --- !u!1 &1487644647
 GameObject:
   m_ObjectHideFlags: 0
