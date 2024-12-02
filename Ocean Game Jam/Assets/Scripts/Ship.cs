@@ -11,10 +11,29 @@ public class Ship : MonoBehaviour
     SpriteRenderer sr;
     Rigidbody2D rb;
 
+    Stopwatch stopwatch; 
+
+    //GameTimer gameTimer;
+    //GameOverMenu gameOverMenu;
+
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+
+        stopwatch = FindObjectOfType<Stopwatch>();
+
+        //gameTimer = FindObjectOfType<GameTimer>();
+        //gameOverMenu = FindObjectOfType<GameOverMenu>();
+    }
+
+        void Start()
+    {
+        // Start the stopwatch when the scene starts
+        if (stopwatch != null)
+        {
+            stopwatch.StartStopwatch();
+        }
     }
 
 
@@ -39,10 +58,23 @@ public class Ship : MonoBehaviour
         Destroy(collision.gameObject);
     }
 
-    void Die()
+    public void Die()
     {
+        if (isDead) return;
+
         isDead = true;
         Debug.Log("Ship is dead!");
+
+        // Stop the stopwatch when the ship dies
+        if (stopwatch != null)
+        {
+            stopwatch.StopStopwatch();
+        }
+
+        // Optionally log the elapsed time or trigger any game over logic
+        Debug.Log("Game Over! Elapsed Time: " + stopwatch.GetElapsedTime());
+
+        // Destroy the ship (you could replace this with respawn logic if needed)
         Destroy(gameObject);
     }
 

@@ -33,8 +33,7 @@ public class Spawner : MonoBehaviour
             rb.velocity = new Vector2(-2f, 0f); // Rocks glide leftwards
         }
 
-        // Debug
-        Debug.Log($"Spawning rock at position: {spawnPos}");
+        //Debug.Log($"Spawning rock at position: {spawnPos}");
     }
 
     void Update()
